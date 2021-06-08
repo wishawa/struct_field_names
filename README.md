@@ -1,5 +1,7 @@
 # struct_field_names
 
+[<img alt="crates.io" src="https://img.shields.io/crates/v/struct_field_names?style=for-the-badge" height="20">](https://crates.io/crates/struct_field_names)
+
 Provides `StructFieldNames` derive macro.
 ```rust
 #[derive(StructFieldNames)]
@@ -56,7 +58,7 @@ struct Struct {
 	field_two: usize,
 }
 ```
-, `SomeStruct::FIELD_NAMES.field_two` won't exist.
+`SomeStruct::FIELD_NAMES.field_two` won't exist.
 
 Visibility of the field names struct follows your struct.
 
@@ -73,4 +75,4 @@ struct PrivateStruct {
 	private_field: i32
 }
 ```
-, only `PublicStruct::FIELD_NAMES.public_field` would be available to the outside world.
+only `PublicStruct::FIELD_NAMES.public_field` would be available to the outside world.
