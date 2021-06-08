@@ -1,0 +1,22 @@
+[package]
+name = "struct_field_names"
+version = "0.1.0"
+authors = ["Wisha Wa <wisha.wa@yandex.com>"]
+edition = "2018"
+license = "MIT"
+
+description = "Derive macros for generating the name of each field in a struct as `&'static str`"
+readme = "README.md"
+documentation = "https://docs.rs/struct_field_names"
+
+repository = "https://github.com/wishawa/struct_field_names"
+keywords = ["struct", "field", "name"]
+categories = ["rust-patterns"]
+
+[dependencies]
+quote = "1.0"
+syn = "1.0"
+proc-macro2 = "1.0"
+
+[lib]
+proc-macro = true
