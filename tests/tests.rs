@@ -1,7 +1,7 @@
-use struct_field_names::StructFieldNames;
+use struct_field_names::{EnumVariantNames, StructFieldNames};
 
 #[test]
-fn test_names() {
+fn test_field_names() {
     #[allow(dead_code)]
     #[derive(StructFieldNames)]
     struct Struct {
@@ -75,4 +75,18 @@ fn not_a_test_field_visibility() {
         private_field: "asdf"
     };
     */
+}
+
+#[test]
+fn test_variant_names() {
+    #[allow(dead_code)]
+    #[derive(EnumVariantNames)]
+    enum Enum {
+        VarOne(i32),
+        VarTwo,
+        VarThree { inner: String },
+    }
+    assert_eq!(Enum::VARIANT_NAMES.VarOne, "VarOne");
+    assert_eq!(Enum::VARIANT_NAMES.VarTwo, "VarTwo");
+    assert_eq!(Enum::VARIANT_NAMES.VarThree, "VarThree");
 }
