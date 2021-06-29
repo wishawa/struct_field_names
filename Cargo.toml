@@ -1,11 +1,11 @@
 [package]
 name = "struct_field_names"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Wisha Wa <wisha.wa@yandex.com>"]
 edition = "2018"
 license = "MIT"
 
-description = "Derive macros for generating the name of each field in a struct as `&'static str`"
+description = "Derive macros for generating the name of each field in a struct and each variant name in an enum as `&'static str`"
 readme = "README.md"
 documentation = "https://docs.rs/struct_field_names"
 
